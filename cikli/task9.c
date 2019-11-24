@@ -15,10 +15,10 @@ int main(){
     while(fabsf(n) >= e){
         s += n;
         if(n > 0){
-            n = -1 * powf(x, i * 2) / factorial (i * 2);
+            n = -1*powf(x, i*2) / factorial(i*2);
         }
         else{
-            n = 1 * powf(x, i * 2) / factorial (i * 2);
+            n = 1*powf(x, i*2) / factorial(i*2);
         }
         i++;
     }
