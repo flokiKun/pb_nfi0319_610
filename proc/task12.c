@@ -16,7 +16,7 @@ void SortInc3(float *arr, int size) {
     }
 }
 
-void fill_arr(float *arr, int size) {
+void FillArr(float *arr, int size) {
     printf("Start fill the array.\n");
     for (int i = 0; i < size; i++) {
         printf("a[%d]=", i);
@@ -24,7 +24,7 @@ void fill_arr(float *arr, int size) {
     }
 }
 
-void pretty_print_arr(float *arr, int size) {
+void PrettyPrintArr(float *arr, int size) {
     for (int i = 0; i < size; i++) {
         printf("%.1f ", arr[i]);
     }
@@ -32,11 +32,11 @@ void pretty_print_arr(float *arr, int size) {
 
 int main() {
     float a[3],b[3];
-    fill_arr(a,3);
-    fill_arr(b,3);
+    FillArr(a, 3);
+    FillArr(b, 3);
     SortInc3(a,3);
     SortInc3(b,3);
-    pretty_print_arr(a,3);
-    pretty_print_arr(b,3);
+    PrettyPrintArr(a, 3);
+    PrettyPrintArr(b, 3);
     return 0;
 }
