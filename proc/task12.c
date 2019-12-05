@@ -1,12 +1,16 @@
 #include <stdio.h>
 
+void SwitchTwoVarieble(float *a1 ,float *a2) {
+    float temp = *a1;
+    *a1 = *a2;
+    *a2 = temp;
+}
+
 void SortInc3(float *arr, int size) {
     for (int i = 0; i < size - 1; i++) {
         for (int j = (size - 1); j > i; j--) {
             if (arr[j - 1] > arr[j]) {
-                float temp = arr[j - 1];
-                arr[j - 1] = arr[j];
-                arr[j] = temp;
+                SwitchTwoVarieble(&arr[j - 1],&arr[j]);
             }
         }
     }
