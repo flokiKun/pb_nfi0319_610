@@ -7,7 +7,7 @@ int main() {
     long int seed=time(NULL);
     srand(seed);
 
-    int N = 5;
+    int N;
     int max = 10;
     printf("Input size of array:");
     scanf("%d",&N);
