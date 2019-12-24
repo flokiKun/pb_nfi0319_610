@@ -35,11 +35,6 @@ int main() {
         if(A[i]>Max) Max=A[i],maxIndex=i;
     }
 
-    if(abs(maxIndex-minIndex)==1) {
-        printf("Error max-min=1");
-        return -1;
-    }
-
     if(minIndex<maxIndex) {
         for(int i=minIndex,j=0;i<=maxIndex/2;i++,j++) {
             int buff = A[i];
