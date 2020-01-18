@@ -1,7 +1,7 @@
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import numpy as np
 
-# функция создания вектора
+# Функция для создания вектора
 def vectorCreation(st:str):
 	coord = st.split()
 	vec = []
@@ -9,18 +9,18 @@ def vectorCreation(st:str):
 		vec.append(float(number))
 	return np.array(vec)
 
-#Делаем вектора
+# Создаем вектора
 v1 = vectorCreation(str(input('Введите координаты вектора через пробел:')))
 v2 = vectorCreation(str(input('Введите координаты вектора через пробел:')))
-
 sum = 0
-# Запускаем вычиления в одельных потоках
-with ThreadPoolExecutor(max_workers=4) as executor:
+
+# Запускаем вычиления в отдельных потоках
+with ThreadPoolExecutor(max_workers=3) as executor:
 	results = []
 	for i in range(len(v1)):
 		results.append(executor.submit(lambda fx: fx[0] * fx[1], [v1[i], v2[i]]))
 
-# Суммируем результаты потоков , для получения результатов
+# Суммируем результаты потоков , для получения результата
 for future in as_completed(results):
 	sum += future.result()
 
